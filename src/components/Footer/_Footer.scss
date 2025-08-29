@@ -1,0 +1,8 @@
+@use "../../styles/init/_variables.scss" as vars;
+
+.Footer {
+  height: vars.$fiftypx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,21 @@
+@use "../../../styles/init/_variables.scss" as vars;
+@use "../../../styles/init/_mixins.scss" as mixins;
+
+.LinkButton {
+  padding: vars.$tenpx vars.$thirtypx;
+  color: var(--white);
+  border-radius: vars.$fiftypx;
+  transition: 0.3s ease;
+  &.color1 {
+    background: var(--color1);
+    border: 1px solid var(--color1);
+  }
+  &.color2 {
+    background: var(--color2);
+    border: 1px solid var(--color2);
+    &:hover {
+      background: color-mix(in srgb, var(--color2), var(--white) 10%);
+      color: var(--white);
+    }
+  }
+}

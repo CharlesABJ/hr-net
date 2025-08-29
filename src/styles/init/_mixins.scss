@@ -1,0 +1,385 @@
+@use "variables" as vars;
+@mixin auto-grid(
+  $big-screen-columns,
+  $desktop-columns,
+  $tablet-columns,
+  $mobile-columns
+) {
+  display: grid;
+  grid-template-columns: repeat($big-screen-columns, minmax(0, 1fr));
+  @media screen and (max-width: 1640px) {
+    grid-template-columns: repeat($desktop-columns, minmax(0, 1fr));
+  }
+  @media screen and (max-width: 1250px) {
+    grid-template-columns: repeat($tablet-columns, minmax(0, 1fr));
+  }
+  @media screen and (max-width: 678px) {
+    grid-template-columns: repeat($mobile-columns, minmax(0, 1fr));
+  }
+}
+
+// Section Margin
+@mixin big-section-margin-inline {
+  margin-inline: 237px !important;
+  @media screen and (max-width: 1640px) {
+    margin-inline: 185px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-inline: 4rem !important;
+  }
+  @media screen and (max-width: 678px) {
+    margin-inline: 1rem !important;
+  }
+}
+@mixin section-margin-inline {
+  margin-inline: 90px !important;
+  @media screen and (max-width: 1640px) {
+    margin-inline: 80px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-inline: 40px !important;
+  }
+  @media screen and (max-width: 678px) {
+    margin-inline: 16px !important;
+  }
+}
+@mixin big-section-margin-bottom {
+  margin-bottom: 120px !important;
+}
+@mixin big-section-margin-top {
+  margin-top: 120px !important;
+}
+@mixin section-margin-top {
+  margin-top: 120px !important;
+  @media screen and (max-width: 1640px) {
+    margin-top: 77px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-top: 60px !important;
+  }
+  @media screen and (max-width: 678px) {
+    margin-top: 40px !important;
+  }
+}
+@mixin section-margin-bottom {
+  margin-bottom: 120px !important;
+  @media screen and (max-width: 1640px) {
+    margin-bottom: 77px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-bottom: 60px !important;
+  }
+  @media screen and (max-width: 678px) {
+    margin-bottom: 40px !important;
+  }
+}
+
+@mixin alternative-margin-inline {
+  margin-inline: 146px !important;
+  @media screen and (max-width: 1640px) {
+    margin-inline: 90px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-inline: 70px !important;
+  }
+  @media screen and (max-width: 678px) {
+    margin-inline: 16px !important;
+  }
+}
+
+// Section Padding
+@mixin big-section-padding-inline {
+  padding-inline: 237px;
+  @media screen and (max-width: 1640px) {
+    padding-inline: 160px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-inline: 4rem;
+  }
+  @media screen and (max-width: 678px) {
+    padding-inline: 1rem;
+  }
+}
+@mixin section-padding-inline {
+  padding-inline: 90px;
+  @media screen and (max-width: 1640px) {
+    padding-inline: 80px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-inline: 40px;
+  }
+  @media screen and (max-width: 678px) {
+    padding-inline: 16px;
+  }
+}
+@mixin alternative-padding-inline {
+  padding-inline: 146px;
+  @media screen and (max-width: 1640px) {
+    padding-inline: 90px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-inline: 70px;
+  }
+  @media screen and (max-width: 678px) {
+    padding-inline: 16px;
+  }
+}
+@mixin big-section-padding-top {
+  padding-top: 190px !important;
+  @media screen and (max-width: 1640px) {
+    padding-top: 170px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-top: 80px !important;
+  }
+  @media screen and (max-width: 678px) {
+    padding-top: 50px !important;
+  }
+}
+@mixin big-section-padding-bottom {
+  padding-bottom: 190px !important;
+  @media screen and (max-width: 1640px) {
+    padding-bottom: 170px !important;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-bottom: 80px !important;
+  }
+  @media screen and (max-width: 678px) {
+    padding-bottom: 50px !important;
+  }
+}
+@mixin section-padding-top {
+  padding-top: 100px;
+  @media screen and (max-width: 1640px) {
+    padding-top: 77px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-top: 60px;
+  }
+  @media screen and (max-width: 678px) {
+    padding-top: 40px;
+  }
+}
+@mixin section-padding-bottom {
+  padding-bottom: 100px;
+  @media screen and (max-width: 1640px) {
+    padding-bottom: 77px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 678px) {
+    padding-bottom: 40px;
+  }
+}
+
+@mixin classic-h1-font-size {
+  font-size: 60px;
+  @media screen and (max-width: 1640px) {
+    font-size: 51px;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 26px;
+  }
+}
+
+@mixin classic-h1 {
+  @include classic-h1-font-size;
+  font-weight: vars.$weight-black;
+  line-height: 60px;
+  @media screen and (max-width: 1640px) {
+  }
+  @media screen and (max-width: 678px) {
+  }
+  @media screen and (max-width: 450px) {
+  }
+}
+
+@mixin classic-h2-font-size {
+  font-size: 32px;
+  @media screen and (max-width: 1640px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 1250px) {
+    font-size: 22px;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: 18px;
+  }
+}
+
+@mixin classic-h2 {
+  @include classic-h2-font-size;
+  position: relative;
+  font-weight: vars.$weight-bold;
+  letter-spacing: 0.78px;
+  line-height: 33px;
+
+  @media screen and (max-width: 678px) {
+    line-height: 25px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@mixin alternative-h2-font-size {
+  font-size: 30px;
+  @media screen and (max-width: 1640px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: 20px;
+  }
+}
+
+@mixin alternative-h2 {
+  @include alternative-h2-font-size;
+  font-weight: vars.$weight-bold;
+  letter-spacing: 0;
+  line-height: 42px;
+  @media screen and (max-width: 678px) {
+    line-height: 25px;
+  }
+}
+@mixin big-h2-font-size {
+  font-size: 47px;
+  @media screen and (max-width: 1640px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 1250px) {
+    font-size: 37px;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: 25px;
+  }
+}
+
+@mixin big-h2 {
+  @include big-h2-font-size;
+  font-weight: vars.$weight-bold;
+  letter-spacing: 1.41px;
+  line-height: 59px;
+  margin-bottom: 17px;
+  @media screen and (max-width: 1250px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 678px) {
+    margin-bottom: 10px;
+    line-height: 32px;
+  }
+}
+@mixin menu-font-size {
+  font-size: 18px;
+  @media screen and (max-width: 1640px) {
+    font-size: 16px;
+  }
+}
+
+@mixin body-font-size {
+  font-size: 17px;
+  @media screen and (max-width: 1640px) {
+    font-size: 15px;
+  }
+}
+
+@mixin classic-card-title-font-size {
+  font-size: 22px;
+  @media screen and (max-width: 1640px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 1250px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: 12px;
+  }
+}
+
+@mixin classic-card-title {
+  @include classic-card-title-font-size;
+  position: relative;
+  font-weight: vars.$weight-bold;
+}
+
+@mixin classic-button {
+  position: relative;
+  display: block;
+  height: max-content;
+  color: inherit;
+  border: 3px solid vars.$black;
+  padding: vars.$fourteenpx;
+  border-radius: 50px;
+  font-weight: vars.$weight-bold;
+  font-size: vars.$sixteenpx;
+  letter-spacing: 0.54px;
+  line-height: vars.$twentypx;
+  color: vars.$black;
+  @media screen and (max-width: 678px) {
+    padding: vars.$tenpx;
+    font-size: vars.$twelvepx;
+  }
+}
+
+@mixin big-button-font-size {
+  font-size: vars.$twenty-twopx;
+  @media screen and (max-width: 678px) {
+    font-size: vars.$twelvepx;
+  }
+}
+@mixin big-button {
+  @include big-button-font-size;
+  display: inline-block;
+  background-color: vars.$white;
+  padding: vars.$eighteenpx vars.$fourtypx;
+  border-radius: 50px;
+  border: none;
+  font-weight: vars.$weight-bold;
+  letter-spacing: 0.75px;
+  color: vars.$black;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  &:hover {
+    color: vars.$primary-color;
+  }
+  @media screen and (max-width: 678px) {
+    padding: vars.$twelvepx vars.$fourtypx;
+  }
+}
+@mixin classic-limited-text($maxLine: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $maxLine; // Limite le texte à $maxLine lignes
+  -webkit-box-orient: vertical; // Orientation verticale
+}
+
+@mixin classic-input {
+  width: 100%;
+  border: 2px solid vars.$black;
+  border-radius: 39px;
+  padding: 14.47px 22.77px;
+  font-size: vars.$fifteenpx;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  &:focus-visible {
+    outline-offset: 2px !important;
+    outline: 2px solid vars.$black !important;
+    border-color: var(--grey-text-color) !important;
+  }
+}
+
+@mixin classic-textarea {
+  width: 100%;
+  border: 2px solid vars.$black;
+  border-radius: 25px;
+  padding: 21.78px 22.77px;
+  font-size: vars.$fifteenpx;
+  transition: 0.2s ease-in;
+  &:focus-visible {
+    outline-offset: 2px !important;
+    outline: 2px solid vars.$black !important;
+    border-color: var(--grey-text-color) !important;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+
+.TitleAndDescription {
+  @include mixins.section-padding-top;
+  @include mixins.section-padding-bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(6 * vars.$hundredpx);
+  margin-inline: auto;
+  text-align: center;
+  gap: vars.$tenpx;
+
+  &.big-title {
+    gap: vars.$twentypx;
+
+    .title {
+      @include mixins.classic-h1;
+    }
+  }
+  .title {
+    @include mixins.alternative-h2;
+  }
+}
+.description {
+  line-height: 1.2;
+}

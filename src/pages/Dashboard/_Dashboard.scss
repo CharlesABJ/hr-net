@@ -1,0 +1,13 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+
+.Dashboard {
+  .container-zone {
+    .cards-zone {
+      @include mixins.section-padding-bottom;
+      @include mixins.section-padding-inline;
+      @include mixins.auto-grid(3, 3, 1, 1);
+      gap: vars.$twentypx;
+    }
+  }
+}

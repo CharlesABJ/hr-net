@@ -1,0 +1,47 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+
+body {
+  margin-top: vars.$eightypx;
+}
+.Header {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: vars.$eightypx;
+  background: var(--white);
+  padding-inline: vars.$sixty-fivepx;
+  box-shadow: 0 2px 4px #0000001a;
+  z-index: 2;
+
+  .container-zone {
+    @include mixins.section-padding-inline;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: vars.$fiftypx;
+
+    .logo {
+      width: calc(vars.$hundredpx * 1.5);
+      object-fit: contain;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: vars.$fiftypx;
+        li {
+          a {
+            &.active {
+              text-decoration: none;
+              color: var(--color2);
+            }
+          }
+        }
+      }
+    }
+    .LinkButton {
+      margin-left: auto;
+    }
+  }
+}

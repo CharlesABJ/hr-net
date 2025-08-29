@@ -1,0 +1,9 @@
+@use "variables" as vars;
+body {
+  font-family: vars.$font-base;
+
+  main {
+    background: color-mix(in srgb, #f8f8f8, var(--color2) 5%);
+    min-height: calc(100vh - vars.$eightypx - vars.$fiftypx);
+  }
+}

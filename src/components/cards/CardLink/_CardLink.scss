@@ -1,0 +1,25 @@
+@use "../../../styles/init/_variables.scss" as vars;
+@use "../../../styles/init/_mixins.scss" as mixins;
+
+.CardLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.$twentypx;
+  padding: vars.$twentypx vars.$fiftypx;
+  background: var(--white);
+  border-radius: vars.$thirteenpx;
+  border: 1px solid var(--gray);
+  text-align: center;
+
+  .title {
+    @include mixins.classic-card-title;
+  }
+  .description {
+    .counter {
+      @include mixins.classic-card-title;
+
+      display: block;
+    }
+  }
+}
