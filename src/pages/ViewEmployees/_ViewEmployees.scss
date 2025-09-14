@@ -1,0 +1,34 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+.ViewEmployees {
+  @include mixins.section-padding-inline;
+  .empty-employees {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: vars.$thirtypx vars.$sixtypx;
+    background: #fff6e6;
+    color: var(--color2);
+    padding-block: vars.$thirtypx;
+    margin-inline: auto;
+    border-radius: vars.$thirteenpx;
+    text-align: center;
+    gap: vars.$thirtypx;
+    box-shadow: 0 2px 4px #0000001a;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 2px 4px #0000002a;
+      color: inherit;
+    }
+    .title {
+      font-size: vars.$twentypx;
+      font-weight: vars.$weight-medium;
+    }
+    display: none;
+  }
+  .table-zone {
+  }
+}

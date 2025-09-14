@@ -1,0 +1,37 @@
+[
+  {
+    "rue": "Broadway",
+    "numero": "200",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Broadway",
+    "numero": "202",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Florence Ave",
+    "numero": "50",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Main St",
+    "numero": "100",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Main St",
+    "numero": "102",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  }
+]

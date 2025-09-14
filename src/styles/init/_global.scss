@@ -1,9 +1,10 @@
 @use "variables" as vars;
 body {
   font-family: vars.$font-base;
+  background: #f6f9fb;
 
   main {
-    background: color-mix(in srgb, #f8f8f8, var(--color2) 5%);
+    background: inherit;
     min-height: calc(100vh - vars.$eightypx - vars.$fiftypx);
   }
 }

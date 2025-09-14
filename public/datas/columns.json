@@ -1,0 +1,29 @@
+[
+  {
+    "label": "First Name"
+  },
+  {
+    "label": "Last Name"
+  },
+  {
+    "label": "Start Date"
+  },
+  {
+    "label": "Department"
+  },
+  {
+    "label": "Date of Birth"
+  },
+  {
+    "label": "State"
+  },
+  {
+    "label": "City"
+  },
+  {
+    "label": "Zip Code"
+  },
+  {
+    "label": "Street"
+  }
+]

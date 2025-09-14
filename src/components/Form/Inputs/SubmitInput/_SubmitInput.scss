@@ -1,0 +1,22 @@
+@use "../../../../styles/init/variables.scss" as vars;
+
+.SubmitInput {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  padding: vars.$thirteenpx vars.$thirtypx;
+  border-radius: calc(vars.$thirteenpx / 2);
+  border: none;
+  background: var(--color1);
+  color: var(--white);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: vars.$weight-semibold;
+  transition: 0.2s ease;
+  &.disabled {
+    background: gray;
+  }
+  &:hover {
+    background: color-mix(in srgb, var(--color1), var(--white) 15%);
+  }
+}

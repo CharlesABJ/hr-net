@@ -8,7 +8,7 @@ function CreateEmployee() {
       <TitleAndDescription title="Create New Employee">
         Fill out the form below to create a new employee record
       </TitleAndDescription>
-      <Form title="Employee Information" />
+      <Form title1="Employee Information" title2="Address Information" />
     </main>
   );
 }

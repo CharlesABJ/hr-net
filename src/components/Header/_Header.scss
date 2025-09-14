@@ -10,7 +10,6 @@ body {
   width: 100%;
   height: vars.$eightypx;
   background: var(--white);
-  padding-inline: vars.$sixty-fivepx;
   box-shadow: 0 2px 4px #0000001a;
   z-index: 2;
 
@@ -19,6 +18,7 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: vars.$fiftypx;
 
     .logo {
@@ -27,17 +27,30 @@ body {
     }
 
     nav {
+      margin-left: auto;
       ul {
         display: flex;
-        gap: vars.$fiftypx;
         li {
           a {
+            background: var(--color2);
+            padding: vars.$tenpx vars.$thirtypx;
+            border-radius: calc(vars.$thirteenpx / 2);
+            color: var(--white);
+            transition: 0.3s ease;
+            &:hover {
+              background: color-mix(in srgb, var(--color2), var(--white) 10%);
+            }
+            &:active {
+              background: var(--color2);
+            }
             &.active {
-              text-decoration: none;
-              color: var(--color2);
+              display: none;
             }
           }
         }
+      }
+      &.hidden {
+        display: none;
       }
     }
     .LinkButton {

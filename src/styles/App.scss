@@ -8,8 +8,20 @@
 
 // Pages
 @use "@/pages/Dashboard/_Dashboard.scss";
+@use "@/pages/CreateEmployee/_CreateEmployee.scss";
+@use "@/pages/ViewEmployees/_ViewEmployees.scss";
 
 // Components
 @use "@/components/TitleAndDescription/_TitleAndDescription.scss";
 @use "@/components/buttons/LinkButton/_LinkButton.scss";
 @use "@/components/cards/CardLink/_CardLink.scss";
+@use "@/components/Form/_Form.scss";
+
+// Form
+// Inputs
+@use "@/components/Form/inputs/TextInput/_TextInput.scss";
+@use "@/components/Form/inputs/DateInput/_DateInput.scss";
+@use "@/components/Form/inputs/SelectInput/_SelectInput.scss";
+@use "@/components/Form/inputs/SubmitInput/_SubmitInput.scss";
+
+@use "@/components/Table/_Table.scss";

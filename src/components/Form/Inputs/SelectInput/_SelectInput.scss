@@ -1,0 +1,19 @@
+.SelectInput {
+  .fake-select {
+    position: relative;
+    cursor: pointer;
+    .chevron {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%) rotate(45deg);
+      border-color: color-mix(in srgb, var(--color2), transparent 50%);
+      border-bottom-style: solid;
+      border-right-style: solid;
+      border-bottom-width: 1px;
+      border-right-width: 1px;
+    }
+  }
+}

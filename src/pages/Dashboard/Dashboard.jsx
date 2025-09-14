@@ -7,7 +7,7 @@ function Dashboard() {
   return (
     <main className="Dashboard">
       <div className="container-zone">
-        <TitleAndDescription bigTitle title=" Welcome to HRnet">
+        <TitleAndDescription bigTitle title=" Welcome to HR-Net">
           Streamline your HR operations with our comprehensive employee
           management system. Create, view, and manage employee records with
           ease.

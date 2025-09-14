@@ -1,0 +1,60 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+
+.Form {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: vars.$thirtypx;
+  background: var(--white);
+  padding-block: vars.$thirtypx;
+  width: 50%;
+  max-width: calc(9 * vars.$hundredpx);
+  margin-inline: auto;
+  border-radius: vars.$thirteenpx;
+
+  .zone {
+    .title {
+      width: 100%;
+      font-size: vars.$twentypx;
+      padding: vars.$fivepx vars.$thirtypx;
+      font-weight: vars.$weight-semibold;
+
+      &.first-title {
+        background: color-mix(in srgb, var(--white), var(--color1) 15%);
+      }
+    }
+    .inputs-zone {
+      @include mixins.auto-grid(2, 2, 1, 1);
+      gap: vars.$thirtypx;
+      margin: vars.$thirtypx;
+      padding-bottom: vars.$sixtypx;
+      border-bottom: 1px solid
+        color-mix(in srgb, var(--color2), transparent 50%);
+
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: vars.$tenpx;
+
+        input,
+        .input {
+          padding: vars.$thirteenpx vars.$tenpx;
+          border-radius: calc(vars.$thirteenpx / 2);
+          border: 1px solid color-mix(in srgb, var(--color2), transparent 50%);
+          &:focus-visible {
+            outline-offset: 2px;
+            outline: 2px solid var(--color2);
+          }
+          &.disabled {
+            background: gray;
+          }
+        }
+      }
+    }
+  }
+  .SubmitInput {
+    margin-left: auto;
+    margin-right: vars.$thirtypx;
+  }
+}

@@ -5,8 +5,12 @@ function Footer() {
   return (
     <footer className="Footer">
       <p>
-        © 2025 <Link to="https://charlesabj.com">Hr-Net.</Link> All rights
-        reserved.
+        © 2025
+        <Link target="_blank" to="https://charlesabj.com">
+          {" "}
+          Hr-Net.{" "}
+        </Link>
+        All rights reserved.
       </p>
     </footer>
   );

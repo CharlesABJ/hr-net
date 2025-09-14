@@ -1,0 +1,71 @@
+@use "../../styles/init/_variables.scss" as vars;
+
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--white);
+
+  thead {
+    background: var(--color1);
+    background: color-mix(in srgb, var(--white), var(--color1) 15%);
+
+    text-align: left;
+    tr {
+      th {
+        padding: vars.$sixteenpx;
+        user-select: none;
+        cursor: pointer;
+        .label {
+          position: relative;
+          display: block;
+          width: max-content;
+          max-width: 100%;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            left: calc(100% + 10px);
+            background: transparent;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+            transform: translateY(-50%);
+            transition: 0.3s ease;
+          }
+          &.asc {
+            &::after {
+              background: var(--color1);
+            }
+          }
+          &.desc {
+            &::after {
+              background: var(--color1);
+
+              clip-path: polygon(50% 100%, 100% 0, 0 0);
+            }
+          }
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-bottom: 1px solid #ccc;
+      &:nth-of-type(even) {
+        background: #f6f9fb;
+      }
+      &:hover {
+        background: color-mix(in srgb, var(--white), var(--color1) 7%);
+      }
+      td {
+        padding: vars.$sixteenpx;
+        &.no-records {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
