@@ -1,0 +1,31 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+.Pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: vars.$sixteenpx;
+  gap: vars.$sixteenpx;
+  margin-top: vars.$twenty-fourpx;
+  .select {
+    margin-right: auto;
+    width: vars.$fiftypx;
+    cursor: pointer;
+  }
+
+  .pages {
+    display: flex;
+    align-items: center;
+    gap: vars.$tenpx;
+
+    button {
+      padding: vars.$fivepx vars.$thirteenpx;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -12,14 +12,35 @@
   border: 1px solid var(--gray);
   text-align: center;
 
+  .icon {
+    width: vars.$fiftypx;
+    height: vars.$fiftypx;
+    svg {
+      transition: 0.3s ease-in-out;
+    }
+  }
   .title {
     @include mixins.classic-card-title;
+    transition: 0.3s ease-in-out;
   }
   .description {
+    transition: 0.3s ease-in-out;
     .counter {
-      @include mixins.classic-card-title;
+      @include mixins.classic-h2;
 
       display: block;
+    }
+  }
+
+  &:hover {
+    .icon {
+      svg {
+        fill: var(--color1);
+      }
+    }
+    .title,
+    .description {
+      color: var(--color1);
     }
   }
 }

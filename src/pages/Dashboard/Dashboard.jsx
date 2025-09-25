@@ -14,14 +14,22 @@ function Dashboard() {
         </TitleAndDescription>
 
         <div className="cards-zone">
-          <CardLink link="/create-employee" icon="" title="Create New Employee">
+          <CardLink
+            link="/create-employee"
+            icon="create-employee"
+            title="Create New Employee"
+          >
             Create comprehensive employee profiles with all necessary
             information
           </CardLink>
-          <CardLink link="/view-employees" icon="" title="View Employees">
+          <CardLink
+            link="/view-employees"
+            icon="view-employees"
+            title="View Employees"
+          >
             Browse and search through your employee database
           </CardLink>
-          <CardLink icon="" title="Total Employees">
+          <CardLink icon="total-employees" title="Total Employees">
             <span className="counter">{totalEmployees}</span>
             Current employees in system
           </CardLink>

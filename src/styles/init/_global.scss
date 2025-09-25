@@ -5,6 +5,6 @@ body {
 
   main {
     background: inherit;
-    min-height: calc(100vh - vars.$eightypx - vars.$fiftypx);
+    min-height: calc(100vh - (3 * vars.$eightypx));
   }
 }

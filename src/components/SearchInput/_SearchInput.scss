@@ -1,0 +1,61 @@
+@use "../../styles/init/_variables.scss" as vars;
+@use "../../styles/init/_mixins.scss" as mixins;
+
+.SearchInput {
+  position: relative;
+  display: flex;
+  margin-bottom: vars.$twenty-fourpx;
+  width: max-content;
+
+  .search-icon {
+    @include mixins.flex-center;
+    background: var(--color2);
+    width: vars.$fiftypx;
+    border-radius: calc(vars.$thirteenpx / 2);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    svg {
+      display: block;
+      width: 50%;
+      height: auto;
+      fill: var(--white);
+    }
+  }
+  input {
+    width: calc(vars.$hundredpx * 2);
+    padding: vars.$thirteenpx vars.$tenpx;
+    border-radius: calc(vars.$thirteenpx / 2);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid color-mix(in srgb, var(--color2), transparent 50%);
+    &:focus-visible {
+      outline: 2px solid var(--color2);
+      outline-offset: -2px;
+    }
+  }
+  .cross {
+    @include mixins.flex-center;
+    position: absolute;
+    background: var(--color2);
+    top: 50%;
+    transform: translateY(-50%);
+    right: vars.$tenpx;
+    width: vars.$twentypx;
+    height: vars.$twentypx;
+    border-radius: 50%;
+    cursor: pointer;
+    span {
+      position: absolute;
+      display: block;
+      width: 50%;
+      height: 2px;
+      background: var(--white);
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -56,5 +56,11 @@ body {
     .LinkButton {
       margin-left: auto;
     }
+    .logout-button {
+      transition: 0.3s ease;
+      &:hover {
+        fill: color-mix(in srgb, red, var(--color2));
+      }
+    }
   }
 }
