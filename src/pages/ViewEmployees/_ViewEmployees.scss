@@ -29,5 +29,14 @@
     }
   }
   .table-zone {
+    max-width: 100%;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .ViewEmployees {
+    .Pagination {
+    }
   }
 }

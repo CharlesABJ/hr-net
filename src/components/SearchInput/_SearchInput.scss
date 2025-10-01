@@ -23,7 +23,7 @@
   }
   input {
     width: calc(vars.$hundredpx * 2);
-    padding: vars.$thirteenpx vars.$tenpx;
+    padding: vars.$tenpx vars.$tenpx;
     border-radius: calc(vars.$thirteenpx / 2);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

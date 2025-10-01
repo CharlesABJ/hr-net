@@ -1,0 +1,26 @@
+@use "../../styles/init/_variables.scss" as vars;
+
+.EmployeeDetails {
+  padding-inline: vars.$sixteenpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .content {
+    margin: auto;
+    background: var(--white);
+    width: 70%;
+    padding: vars.$twenty-fourpx;
+    border-radius: vars.$twelvepx;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$twelvepx;
+    h1 {
+      margin-bottom: vars.$twenty-fourpx;
+    }
+    .last-name {
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

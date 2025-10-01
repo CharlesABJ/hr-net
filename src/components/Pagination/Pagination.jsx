@@ -14,14 +14,14 @@ function Pagination({
     (option) => option <= searchedRows.length
   );
 
-  // We add "All" if there is at least 9 result
-  if (searchedRows.length > 9) {
+  // We add "All" if there are more than 10 results
+  if (searchedRows.length > 10) {
     options.push("All");
   }
 
   // Aucun résultat => pas de pagination
   if (searchedRows.length === 0) {
-    return <div className="Pagination">Aucun résultat</div>;
+    return null;
   }
 
   return (
@@ -53,7 +53,7 @@ function Pagination({
           <button
             className="prev"
             disabled={currentPage === 1}
-            onClick={() => setCurrentPage((p) => p - 1)}
+            onClick={() => setCurrentPage((page) => page - 1)}
           >
             Prev
           </button>
@@ -63,7 +63,7 @@ function Pagination({
           <button
             className="next"
             disabled={currentPage === totalPages}
-            onClick={() => setCurrentPage((p) => p + 1)}
+            onClick={() => setCurrentPage((page) => page + 1)}
           >
             Next
           </button>

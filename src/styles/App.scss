@@ -10,12 +10,14 @@
 @use "@/pages/Dashboard/_Dashboard.scss";
 @use "@/pages/CreateEmployee/_CreateEmployee.scss";
 @use "@/pages/ViewEmployees/_ViewEmployees.scss";
+@use "@/pages/EmployeeDetails/_EmployeeDetails.scss";
 
 // Components
 @use "@/components/TitleAndDescription/_TitleAndDescription.scss";
 @use "@/components/buttons/LinkButton/_LinkButton.scss";
 @use "@/components/cards/CardLink/_CardLink.scss";
 @use "@/components/Form/_Form.scss";
+@use "@/components/Modal/_Modal.scss";
 
 // Form
 // Inputs

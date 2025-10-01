@@ -58,3 +58,18 @@
     margin-right: vars.$thirtypx;
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .Form {
+    width: 70%;
+    .SubmitInput {
+      margin-inline: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .Form {
+    width: 100%;
+  }
+}

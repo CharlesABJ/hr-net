@@ -4,11 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-inline: vars.$sixteenpx;
   gap: vars.$sixteenpx;
   margin-top: vars.$twenty-fourpx;
   .select {
     margin-right: auto;
+    padding-inline: vars.$fivepx;
     width: vars.$fiftypx;
     cursor: pointer;
   }

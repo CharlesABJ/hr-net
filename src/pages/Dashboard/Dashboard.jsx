@@ -1,9 +1,18 @@
 import React from "react";
 import TitleAndDescription from "../../components/TitleAndDescription/TitleAndDescription";
 import CardLink from "../../components/cards/CardLink/CardLink";
+//import rows from "../../../public/datas/current-employees.json";
+
+import { useGetEmployeesQuery } from "../../redux/employees/employeeApi";
+import { useSelector } from "react-redux";
 
 function Dashboard() {
-  const totalEmployees = 0;
+  const { data: remoteEmployeesData = [] } = useGetEmployeesQuery();
+  const localEmployeesData = useSelector(
+    (state) => state.employees.employeesList
+  );
+  const rows = [...localEmployeesData, ...remoteEmployeesData];
+  const totalEmployees = rows.length;
   return (
     <main className="Dashboard">
       <div className="container-zone">

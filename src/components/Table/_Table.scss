@@ -8,7 +8,6 @@
   thead {
     background: var(--color1);
     background: color-mix(in srgb, var(--white), var(--color1) 15%);
-
     text-align: left;
     tr {
       th {
@@ -20,6 +19,7 @@
           display: block;
           width: max-content;
           max-width: 100%;
+
           &::after {
             position: absolute;
             content: "";
@@ -64,6 +64,19 @@
         padding: vars.$sixteenpx;
         &.no-records {
           text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .Table {
+    thead {
+      tr {
+        th {
+          min-width: 150px;
+          max-width: 100%;
         }
       }
     }

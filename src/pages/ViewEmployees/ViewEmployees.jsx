@@ -1,21 +1,35 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import TitleAndDescription from "@/components/TitleAndDescription/TitleAndDescription";
 import { Link } from "react-router-dom";
 import Table from "../../components/Table/Table";
 
-import columns from "../../../public/datas/columns.json";
-import rows from "../../../public/datas/current-employees.json";
+import columns from "@/datas/columns.json";
+
+//import rows from "../../../public/datas/current-employees.json";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import useSearch from "../../hooks/useSearch";
 import useSort from "../../hooks/useSort";
 import usePagination from "../../hooks/usePagination";
 import Pagination from "../../components/Pagination/Pagination";
+import { useGetEmployeesQuery } from "../../redux/employees/employeeApi";
+import { useSelector } from "react-redux";
 
 function ViewEmployees() {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "" });
   const [searchValue, setSearchValue] = useState("");
   const [rowsPerPage, setRowsPerPage] = useState(10);
+  const navigate = useNavigate();
 
+  // We get the employees list from the store
+
+  const { data: remoteEmployeesData = [] } = useGetEmployeesQuery();
+  const localEmployeesData = useSelector(
+    (state) => state.employees.employeesList
+  );
+  const rows = [...localEmployeesData, ...remoteEmployeesData];
+
+  // SORT - FILTER - PAGINATION
   // Sort logic
   const handleSort = (columnLabel) => {
     let direction = "asc";
@@ -45,6 +59,10 @@ function ViewEmployees() {
   const { currentPage, setCurrentPage, totalPages, paginatedRows } =
     usePagination(sortedRows, rowsPerPage);
 
+  // REDIRECT TO EMPLOYEE DETAILS
+  const handleDetails = (row) => {
+    navigate(`/view-employees/employees/${row.employeeId}`);
+  };
   return (
     <main className="ViewEmployees">
       <TitleAndDescription title="View Current Employees">
@@ -74,6 +92,7 @@ function ViewEmployees() {
               columns={columns}
               rows={paginatedRows}
               sortConfig={sortConfig}
+              handleDetails={handleDetails}
               handleSort={handleSort}
             />
           </div>

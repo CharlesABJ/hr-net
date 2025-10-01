@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EmployeeDetails from "./pages/EmployeeDetails/EmployeeDetails";
 
 // On importe les composants pages
 const Layout = lazy(() => import("@/pages/Layout"));
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <ViewEmployees />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/view-employees/employees/:id",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <EmployeeDetails />
           </Suspense>
         ),
       },

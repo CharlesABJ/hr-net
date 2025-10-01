@@ -64,3 +64,22 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 678px) {
+  .Header {
+    .container-zone {
+      gap: vars.$tenpx;
+      nav {
+        ul {
+          li {
+            display: flex;
+            font-size: vars.$tenpx;
+            a {
+              padding-inline: vars.$tenpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}

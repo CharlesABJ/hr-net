@@ -6,5 +6,17 @@ body {
   main {
     background: inherit;
     min-height: calc(100vh - (3 * vars.$eightypx));
+
+    .error {
+      color: color-mix(in srgb, red, var(--color2) 40%);
+      font-size: small;
+      margin-top: -5px;
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .center {
+    text-align: center;
   }
 }

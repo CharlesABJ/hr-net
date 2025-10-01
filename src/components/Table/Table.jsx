@@ -1,15 +1,15 @@
 import React from "react";
 
-function Table({ columns, rows, sortConfig, handleSort }) {
+function Table({ columns, rows, sortConfig, handleSort, handleDetails }) {
   return (
     <table className="Table">
       <thead>
         <tr>
           {columns.map((column) => (
-            <th key={column.label} onClick={() => handleSort(column.label)}>
+            <th key={column.key} onClick={() => handleSort(column.key)}>
               <span
                 className={
-                  sortConfig.key === column.label && sortConfig.direction
+                  sortConfig.key === column.key && sortConfig.direction
                     ? sortConfig.direction + " label"
                     : "label"
                 }
@@ -29,14 +29,14 @@ function Table({ columns, rows, sortConfig, handleSort }) {
           </tr>
         ) : (
           rows.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr key={rowIndex} onClick={() => handleDetails(row)}>
               {columns.map((column) =>
-                column.label === "State" ? (
-                  <td title={row.State} key={column.label}>
+                column.key === "state" ? (
+                  <td title={row.state} key={column.key}>
                     {row.stateAbbr}
                   </td>
                 ) : (
-                  <td key={column.label}>{row[column.label]}</td>
+                  <td key={column.key}>{row[column.key]}</td>
                 )
               )}
             </tr>
