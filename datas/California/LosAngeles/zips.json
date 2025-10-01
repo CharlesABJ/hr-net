@@ -1,0 +1,12 @@
+[
+  { "zip": "90001", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90002", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90003", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90004", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90005", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90006", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90007", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90008", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90009", "cityParent": "Los Angeles", "stateParent": "California" },
+  { "zip": "90010", "cityParent": "Los Angeles", "stateParent": "California" }
+]
