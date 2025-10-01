@@ -1,4 +1,4 @@
-.Abj-modal {
+.Abj-react-modal {
   position: fixed;
   inset: 0;
   display: flex;
@@ -65,6 +65,6 @@
   }
 }
 
-body:has(.Abj-modal.is-open) {
+body:has(.Abj-react-modal.is-open) {
   overflow: hidden;
 }
