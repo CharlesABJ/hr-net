@@ -13,7 +13,7 @@ const ViewEmployees = lazy(() => import("@/pages/ViewEmployees/ViewEmployees"));
 const router = createBrowserRouter([
   {
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="loading">Loading...</div>}>
         <Layout />
       </Suspense>
     ),
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         path: "/",
         index: true,
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
             <Dashboard />
           </Suspense>
         ),
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/create-employee",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
             <CreateEmployee />
           </Suspense>
         ),
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: "/view-employees",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
             <ViewEmployees />
           </Suspense>
         ),
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/view-employees/employees/:id",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
             <EmployeeDetails />
           </Suspense>
         ),

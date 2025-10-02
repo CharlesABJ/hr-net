@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 
 import Departments from "../../../public/datas/departments.json";
 import States from "../../../public/datas/states.json";
-import CaliforniaCities from "../../../public/datas/California/cities.json";
-import LosAngelesZips from "../../../public/datas/California/LosAngeles/zips.json";
+import CitiesCalifornia from "../../../public/datas/California/cities.json";
+import ZipsLosAngeles from "../../../public/datas/California/LosAngeles/zips.json";
 import Addresses90001 from "../../../public/datas/California/LosAngeles/90001/addresses.json";
 
 import TextInput from "./inputs/TextInput/TextInput";
@@ -47,8 +47,8 @@ function Form({ title1, title2, onEmployeeCreated }) {
     (department) => department.department
   );
   const stateOptions = States.map((state) => state.state);
-  const cityOptions = CaliforniaCities.map((city) => city.city);
-  const zipOptions = LosAngelesZips.map((zip) => zip.zip);
+  const cityOptions = CitiesCalifornia.map((city) => city.city);
+  const zipOptions = ZipsLosAngeles.map((zip) => zip.zip);
   const addressOptions = Addresses90001.map((address) => {
     return `${address.numero} ${address.rue}`;
   });

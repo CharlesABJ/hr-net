@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import TitleAndDescription from "@/components/TitleAndDescription/TitleAndDescription";
 import Form from "@/components/Form/Form";
-import Modal from "../../components/Modal/Modal";
+import { Modal } from "abj-react-modal";
+import "abj-react-modal/dist/index.css";
 
 function CreateEmployee() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,9 +32,11 @@ function CreateEmployee() {
           The new employee{" "}
           {createdEmployee && (
             <>
-              " {createdEmployee.firstName}{" "}
-              <span className="uppercase">{createdEmployee.lastName}</span> "{" "}
-              <br />{" "}
+              <strong className="text-color1">
+                " {createdEmployee.firstName}{" "}
+                <span className="uppercase">{createdEmployee.lastName}</span> "{" "}
+                <br />{" "}
+              </strong>
             </>
           )}
           has been added to the system.

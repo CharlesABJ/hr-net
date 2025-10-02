@@ -14,7 +14,7 @@ function SelectInput({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Récupère la valeur actuelle dans le formulaire
+  // We get the current value from the form
   const selectedValue = watch(name) || "";
 
   const handleSelect = (value) => {
