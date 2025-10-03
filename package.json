@@ -1,6 +1,7 @@
 {
   "name": "hr-net",
-  "private": true,
+  "private": false,
+  "homepage": "https://charlesabj.github.io/hr-net/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
