@@ -1,12 +1,12 @@
 [
-  { "city": "Los Angeles", "stateParent": "California" },
-  { "city": "San Francisco", "stateParent": "California" },
-  { "city": "San Diego", "stateParent": "California" },
-  { "city": "San Jose", "stateParent": "California" },
-  { "city": "Sacramento", "stateParent": "California" },
+  { "city": "Anaheim", "stateParent": "California" },
   { "city": "Fresno", "stateParent": "California" },
-  { "city": "Oakland", "stateParent": "California" },
   { "city": "Long Beach", "stateParent": "California" },
-  { "city": "Santa Ana", "stateParent": "California" },
-  { "city": "Anaheim", "stateParent": "California" }
+  { "city": "Los Angeles", "stateParent": "California" },
+  { "city": "Oakland", "stateParent": "California" },
+  { "city": "Sacramento", "stateParent": "California" },
+  { "city": "San Diego", "stateParent": "California" },
+  { "city": "San Francisco", "stateParent": "California" },
+  { "city": "San Jose", "stateParent": "California" },
+  { "city": "Santa Ana", "stateParent": "California" }
 ]

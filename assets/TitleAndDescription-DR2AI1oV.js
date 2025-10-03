@@ -1,1 +1,0 @@
-import{j as i}from"./index-B19XwGCY.js";function r({bigTitle:s,title:e,children:t}){return i.jsxs("section",{className:`TitleAndDescription ${s?"big-title":""}`,children:[i.jsx("h1",{className:"title",children:e}),i.jsx("div",{className:"description",children:t})]})}export{r as T};

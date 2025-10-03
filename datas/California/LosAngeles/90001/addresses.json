@@ -8,14 +8,14 @@
   },
   {
     "rue": "Broadway",
-    "numero": "202",
+    "numero": "210",
     "zipParent": "90001",
     "cityParent": "Los Angeles",
     "stateParent": "California"
   },
   {
-    "rue": "Florence Ave",
-    "numero": "50",
+    "rue": "Broadway",
+    "numero": "220",
     "zipParent": "90001",
     "cityParent": "Los Angeles",
     "stateParent": "California"
@@ -30,6 +30,111 @@
   {
     "rue": "Main St",
     "numero": "102",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Main St",
+    "numero": "110",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Avalon Blvd",
+    "numero": "50",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Avalon Blvd",
+    "numero": "55",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Avalon Blvd",
+    "numero": "60",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Central Ave",
+    "numero": "300",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Central Ave",
+    "numero": "305",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Central Ave",
+    "numero": "310",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Florence Ave",
+    "numero": "50",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Florence Ave",
+    "numero": "55",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Florence Ave",
+    "numero": "60",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Compton Ave",
+    "numero": "400",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Compton Ave",
+    "numero": "405",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "Compton Ave",
+    "numero": "410",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "San Pedro St",
+    "numero": "600",
+    "zipParent": "90001",
+    "cityParent": "Los Angeles",
+    "stateParent": "California"
+  },
+  {
+    "rue": "San Pedro St",
+    "numero": "605",
     "zipParent": "90001",
     "cityParent": "Los Angeles",
     "stateParent": "California"
