@@ -52,6 +52,7 @@ const router = createBrowserRouter([
         ),
       },
     ],
+    basename: "/hr-net",
   },
 ]);
 
